@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+@import "animate.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+:root {
+  --primaria: #3da639;
+  --secundaria: #223321;
+  --apoio: #2f812c;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7a7a7a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media screen and (max-width: 480px) {
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+svg {
+  vertical-align: middle;
+}
+
+i-lucide {
+  height: fit-content;
+}
+
+div:where(.swal2-container) {
+  margin: 0 !important;
+}
+
+div:where(.swal2-container) .swal2-html-container {
+  background-color: #223321 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+div:where(.swal2-container) button:where(.swal2-close) {
+  margin: 0 !important;
+}
+
+.swal2-close:focus {
+  box-shadow: none !important;
+}

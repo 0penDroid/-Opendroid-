@@ -1,0 +1,77 @@
+<section class="container">
+  <div class="title-container">
+    <span class="title">Opendroid Forum</span>
+  </div>
+  <button class="bt-comment" (click)="showCommentPop()">
+    <i-lucide name="plus" [size]="30"></i-lucide>
+  </button>
+  <div class="comment-container" *ngFor="let comment of filteredItens">
+    <img class="comment-img" src="assets/imgs/drodroid.png" alt="User Avatar" />
+    <div class="comment-content">
+      <span class="comment-username">Drodroid</span>
+      <span class="comment-title">{{ comment.title }}</span>
+      <p class="comment-text">{{ comment.comment }}</p>
+      <div class="tags">
+        <span class="tag" *ngFor="let tag of cutTags(comment.tag)">{{
+          tag
+        }}</span>
+      </div>
+      <div class="date-container">
+        <span class="comment-date"
+          >Publicado em {{ comment.date | date : "shortDate" }}</span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">7</a>
+    <a href="#">&raquo;</a>
+  </div>
+</section>
+<section style="display: none">
+  <div #commentPop>
+    <form
+      [formGroup]="cForm"
+      (ngSubmit)="insertComment(); $event.preventDefault()"
+    >
+      <div class="post-container">
+        <div class="box">
+          <span class="title-pop">Crie seu comentário!</span>
+          <input
+            type="text"
+            id="titulo"
+            name="titulo"
+            placeholder="Insira um titulo para seu comentário"
+            formControlName="title"
+            required
+          />
+          <span class="title-pop">Corpo</span>
+          <textarea
+            id="corpo"
+            name="corpo"
+            rows="10"
+            placeholder="Descreva com informações seu comentário pergunta ou dúvida aqui..."
+            formControlName="comment"
+            required
+          ></textarea>
+          <span class="title-pop">Tags</span>
+          <input
+            type="text"
+            id="tags"
+            name="tags"
+            placeholder="Adicione tags a sua postagem"
+            formControlName="tag"
+          />
+          <input type="submit" class="btn" value="Postar" />
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

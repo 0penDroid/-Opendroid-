@@ -1,0 +1,29 @@
+<section class="header-container">
+  <div class="menu-container">
+    <img
+      class="logo"
+      src="assets/imgs/logo-opendroid.png"
+      alt="logo-opendroid"
+    />
+    <span class="menu" [routerLink]="['/opendroid/forum']">Fórum</span>
+    <span class="menu" [routerLink]="['/opendroid/documents']">Documentos</span>
+    <span class="menu" [routerLink]="['/opendroid/about']">Sobre</span>
+  </div>
+  <div class="input-container">
+    <i-lucide class="icon" name="search"></i-lucide>
+    <input
+      class="input"
+      type="search"
+      placeholder="Pesquisar"
+      (input)="onInputChange($event)"
+    />
+  </div>
+  <div class="bt-container">
+    <button class="bt" *ngIf="!authService.getUsuarioAutenticado()">
+      Registrar-se
+    </button>
+    <button class="bt" *ngIf="!authService.getUsuarioAutenticado()">
+      Entrar
+    </button>
+  </div>
+</section>

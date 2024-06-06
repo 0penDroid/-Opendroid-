@@ -1,0 +1,79 @@
+<div class="sidebar">
+  <div class="menu-btn" (click)="toggle()">
+    <i-lucide name="chevron-right"></i-lucide>
+  </div>
+  <div class="head">
+    <div class="user-img">
+      <img src="assets/imgs/drodroid.png" alt="avatar" />
+    </div>
+    <div class="user-details">
+      <p class="title">Open Source</p>
+      <p class="name">Drodroid</p>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="menu">
+      <p class="title">Main</p>
+      <ul>
+        <li [routerLink]="['/opendroid/forum']">
+          <a>
+            <i-lucide name="home"></i-lucide>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li [routerLink]="['/opendroid/documents']">
+          <a>
+            <i-lucide name="folder-root"></i-lucide>
+            <span class="text">Rooms</span>
+          </a>
+        </li>
+        <li [routerLink]="['/opendroid/achievements']">
+          <a>
+            <i-lucide name="award"></i-lucide>
+            <span class="text">Conquistas</span>
+          </a>
+        </li>
+        <li [routerLink]="['/opendroid/donation']">
+          <a>
+            <i-lucide name="heart-handshake"></i-lucide>
+            <span class="text">Doar</span>
+          </a>
+        </li>
+        <li [routerLink]="['/opendroid/dashboard']">
+          <a>
+            <i-lucide name="bar-chart"></i-lucide>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu">
+      <p class="title">Settings</p>
+      <ul>
+        <li [routerLink]="['/opendroid/settings']">
+          <a>
+            <i-lucide name="settings"></i-lucide>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="menu">
+    <p class="title">Account</p>
+    <ul>
+      <li [routerLink]="['/opendroid/profile']">
+        <a>
+          <i-lucide name="square-user"></i-lucide>
+          <span class="text">Profile</span>
+        </a>
+      </li>
+      <li (click)="logout()">
+        <a>
+          <i-lucide name="door-open"></i-lucide>
+          <span class="text">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+.content {
+  background-color: #2e402e;
+  display: flex;
+  flex-direction: column;
+  min-width: calc(100vw - 280px);
+  margin-left: 240px;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 5px;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.title {
+  color: #8dc63f;
+  font-size: 50px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.document-container {
+  background-color: #3a523a;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.document-description {
+  color: var(--primaria);
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.file-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  i-lucide {
+    color: var(--white);
+  }
+}
+
+.file-info-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 10px;
+  gap: 10px;
+}
+
+.file-title {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.file-description {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #8dc63f;
+  color: var(--black);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.file-download-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bt-file {
+  width: 300px;
+  padding: 10px 10px;
+  background-color: #286d26;
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  text-wrap: nowrap;
+  cursor: pointer;
+}
+
+.file-date {
+  color: var(--white);
+  font-weight: 300;
+}

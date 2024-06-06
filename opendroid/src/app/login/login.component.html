@@ -1,0 +1,43 @@
+<section class="login-container">
+  <form
+    [formGroup]="lForm"
+    class="form"
+    (ngSubmit)="login(); $event.preventDefault()"
+  >
+    <div class="login-box">
+      <img
+        class="logo"
+        src="assets/imgs/logo-opendroid-vertical.png"
+        alt="logo-opendroid"
+      />
+      <div class="input-container">
+        <i-lucide class="icon" name="mail"></i-lucide>
+        <input
+          class="input"
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+        />
+      </div>
+      <div class="input-container">
+        <i-lucide class="icon" name="key"></i-lucide>
+        <input
+          class="input"
+          type="password"
+          placeholder="Senha"
+          formControlName="password"
+        />
+      </div>
+      <input class="bt-login" type="submit" value="ENTRAR" />
+      <a href="http://localhost:8080/forgot-password" class="forgot"
+        >Esqueceu sua senha?</a
+      >
+      <div class="register-container">
+        <span class="new">Novo por aqui?</span>
+        <span class="register" [routerLink]="['/register']"
+          >Crie uma conta!</span
+        >
+      </div>
+    </div>
+  </form>
+</section>

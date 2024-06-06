@@ -1,0 +1,42 @@
+<section class="register-container">
+  <form
+    [formGroup]="rForm"
+    class="form"
+    (ngSubmit)="register(); $event.preventDefault()"
+  >
+    <div class="register-box">
+      <img
+        class="logo"
+        src="assets/imgs/logo-opendroid-vertical.png"
+        alt="logo-opendroid"
+      />
+      <div class="input-container">
+        <i-lucide class="icon" name="mail"></i-lucide>
+        <input
+          class="input"
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+        />
+      </div>
+      <div class="input-container">
+        <i-lucide class="icon" name="key"></i-lucide>
+        <input
+          class="input"
+          type="password"
+          placeholder="Senha"
+          formControlName="password"
+        />
+      </div>
+      <div class="input-container">
+        <i-lucide class="icon" name="key"></i-lucide>
+        <input class="input" type="password" placeholder="Confirmar senha" />
+      </div>
+      <input class="bt-register" type="submit" value="CRIAR CONTA" />
+      <div class="login-container">
+        <span class="new">Já tem uma conta?</span>
+        <span class="login" [routerLink]="['/login']">Entrar!</span>
+      </div>
+    </div>
+  </form>
+</section>
