@@ -30,6 +30,7 @@ export class ForumComponent implements OnInit {
       title: ['', Validators.required],
       comment: ['', Validators.required],
       tag: ['#', Validators.required],
+      date: [new Date(), Validators.required],
     });
   }
 
@@ -82,7 +83,11 @@ export class ForumComponent implements OnInit {
       return this.comments;
     }
     return this.comments.filter((item) =>
-      item.comment.toLowerCase().includes(this.search.toLowerCase())
+      Object.values(item).some(
+        (val) =>
+          (typeof val === 'string' || val instanceof String) &&
+          val.toLowerCase().includes(this.search.toLowerCase())
+      )
     );
   }
 }

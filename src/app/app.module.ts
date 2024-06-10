@@ -9,9 +9,11 @@ import { AuthService } from '../services/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { BuildingComponent } from './building/building.component';
 import { CategoryService } from '../services/category.service';
+import { ChartService } from '../services/chart.service';
 import { CommentService } from '../services/comment.service';
 import { CUSTOM_ELEMENTS_SCHEMA, LOCALE_ID, NgModule } from '@angular/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DocService } from '../services/doc.service';
 import { DocumentsComponent } from './documents/documents.component';
 import { DonationComponent } from './donation/donation.component';
 import { ErrorInterceptorProvider } from '../interceptors/error.interceptor';
@@ -46,6 +48,8 @@ registerLocaleData(localePt);
     AboutComponent,
     AchievementsComponent,
     AppComponent,
+    BuildingComponent,
+    DashboardComponent,
     DocumentsComponent,
     DonationComponent,
     FilterTextPipe,
@@ -53,14 +57,12 @@ registerLocaleData(localePt);
     ForumComponent,
     HeaderComponent,
     LoginComponent,
+    NotFoundComponent,
     OpendroidComponent,
     ProfileComponent,
     RegisterComponent,
-    SidebarComponent,
-    NotFoundComponent,
-    BuildingComponent,
     SettingsComponent,
-    DashboardComponent,
+    SidebarComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -77,14 +79,16 @@ registerLocaleData(localePt);
     AuthInterceptorProvider,
     AuthService,
     CategoryService,
+    ChartService,
     CommentService,
+    DocService,
     ErrorInterceptorProvider,
+    FilterService,
     PostService,
     StorageService,
     SubcategoryService,
     UserService,
     UtilsService,
-    FilterService,
     { provide: LOCALE_ID, useValue: 'pt-BR' },
   ],
   bootstrap: [AppComponent],

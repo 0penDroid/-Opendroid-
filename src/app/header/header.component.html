@@ -19,10 +19,10 @@
     />
   </div>
   <div class="bt-container">
-    <button class="bt" *ngIf="!authService.getUsuarioAutenticado()">
+    <button class="bt" *ngIf="!authService.getUsuarioAutenticado()" [routerLink]="['/register']">
       Registrar-se
     </button>
-    <button class="bt" *ngIf="!authService.getUsuarioAutenticado()">
+    <button class="bt" *ngIf="!authService.getUsuarioAutenticado()" [routerLink]="['/login']">
       Entrar
     </button>
   </div>

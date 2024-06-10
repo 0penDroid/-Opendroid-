@@ -20,6 +20,7 @@
     "@angular/router": "^17.0.0",
     "@auth0/angular-jwt": "^5.2.0",
     "animate.css": "^4.1.1",
+    "apexcharts": "^3.49.1",
     "lucide-angular": "^0.378.0",
     "ngx-skeleton-loader": "^9.0.0",
     "rxjs": "~7.8.0",

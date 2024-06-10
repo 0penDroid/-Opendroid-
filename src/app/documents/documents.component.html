@@ -1,0 +1,28 @@
+<section class="content">
+  <span class="title">Documentos</span>
+  <p class="document-description">
+    Em cada um dos documentos abaixo, você encontrará um material teórico sobre
+    o tema presente título, você pode baixar o arquivo e estudar depois! As tags
+    de identificação são as palavras-chave do conteúdo dos arquivos.
+  </p>
+  <div class="document-container" *ngFor="let doc of filteredItens">
+    <div class="file-container">
+      <i-lucide name="file-down"></i-lucide>
+      <span class="file-title">{{ doc.title }}</span>
+    </div>
+    <div class="file-info-container">
+      <p class="file-description">
+        {{ doc.description }}
+      </p>
+      <div class="tags">
+        <span class="tag" *ngFor="let tag of cutTags(doc.tag)">{{ tag }}</span>
+      </div>
+    </div>
+    <div class="file-download-container">
+      <span class="file-date"
+        >Publicado em {{ doc.date | date : "shortDate" }}</span
+      >
+      <button class="bt-file" (click)="openPDF(doc.link)">Baixar</button>
+    </div>
+  </div>
+</section>

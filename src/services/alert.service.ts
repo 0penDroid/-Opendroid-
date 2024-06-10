@@ -33,6 +33,13 @@ export class AlertsService {
       allowOutsideClick: dismissal,
       showCloseButton: dismissal,
       padding: '0',
+      showClass: {
+        popup: `
+        animate__animated
+        animate__fadeInUp
+        animate__fast
+        `,
+      },
     });
   }
 }
